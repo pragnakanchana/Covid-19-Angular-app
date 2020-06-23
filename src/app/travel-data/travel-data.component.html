@@ -1,0 +1,30 @@
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  
+  </head>
+<div class="jumbotron jumbotron-fluid text-center ">
+    <h1 class="display-4" > Travel Data during Covid-19 Crisis</h1>
+    <hr>
+  
+    <div class="mx-auto" style="padding-left: 500px;">
+      <div class="form-group col-lg-5 mx-auto " >
+        <label for='lc'>Select Location:</label>
+        
+        <select class="form-control" id = "c" #input (change) = 'updateValues(input.value)'>
+            <option >Select Option:</option>
+          <option *ngFor="let lc of locations" [ngValue]="lc">
+                {{lc}}
+            </option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>{{locationData}}</h2>
+
+</div>
+
+  
